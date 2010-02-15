@@ -1,0 +1,37 @@
+!!! XML
+!!!
+
+%html{ html_attrs }
+  %head
+    %meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+
+    %title= @item[:title]
+
+    %link{ :href => '/rubrik/stylesheets/screen.css',
+           :media => 'screen, projection',
+           :rel => 'stylesheet',
+           :type => 'text/css' }
+    %link{ :href => '/rubrik/stylesheets/print.css',
+           :media => 'print',
+           :rel => 'stylesheet',
+           :type => 'text/css' }
+    /[if IE]
+      %link{ :href => '/rubrik/stylesheets/ie.css',
+             :media => 'screen, projection',
+             :rel => 'stylesheet',
+             :type => 'text/css' }
+
+  %body
+    #down
+      %p V
+      %p V
+      %p V
+
+    #main= yield
+
+    #footer
+      %span.about
+        :maruku
+          [About](/rubrik/about/)
+      %span.copy
+        &copy; 2010 Irrational Machines

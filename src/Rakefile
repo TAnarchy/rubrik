@@ -1,0 +1,6 @@
+require 'nanoc3/tasks'
+require 'rake/clean'
+
+task :default do
+  sh "nanoc3 compile"
+end
