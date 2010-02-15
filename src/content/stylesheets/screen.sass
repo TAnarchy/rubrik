@@ -6,6 +6,20 @@
 
 //@import compass/reset.sass
 
+=clearfix
+  &:after
+    :content " "
+    :display block
+    :height 0
+    :clear both
+    :overflow hidden
+    :visibility hidden
+  // This makes ie6 get layout
+  :display inline-block
+  // and this puts it back to block
+  &
+    :display block
+
 /*
   The *:focus rule is reset and suppresses link outlining.
   You _must_ remember to redefine your own outline, as it’s an important accessibility aid. E.g.
@@ -16,15 +30,16 @@
   -moz-border-radius= !pix
   -webkit-border-radius= !pix
 
+!page_width= 600px
+
 body
   font:
     size: 16pt
     family: Arial, Verdana, sans-serif
   line-height: 143%
   color: #444
-  width: 600px
-  margin: auto
   background: #222
+  margin: 0px
 
 #down
   font:
@@ -34,7 +49,7 @@ body
   position: fixed
   z-index: -1
   right: 40px
-  top: 300px
+  bottom: 200px
   p
     margin:
       top: 10px
@@ -43,54 +58,76 @@ body
       top: 0px
       bottom: 0px
 
-#content
-  margin-top: 100px
+#main
+  width= !page_width
+  margin: auto
 
-#content > div
-  +rounded(8px)
+  #content
+    margin-top: 100px
+
+  #content > div
+    +rounded(8px)
+    padding:
+      top: 10px
+      bottom: 10px
+      left: 30px
+      right: 30px
+    background: #fff
+    margin-bottom: 70px
+    margin-top: -60px
+
+  p
+    margin-top: 10px
+  ul
+    margin-top: 10px
+    margin-bottom: 10px
+  .rk
+    color: #e03020
+
+  h1, h2, h3, h4, h5, h6
+    font-weight: bold
+  h1
+    text-align: right
+    color: #f06050
+    font-size: 48pt
+  hr
+    margin-top: 40px
+  h2
+    width: 200px
+    margin-left: -190px
+    text-align: right
+    color: #2060b0
+    font-size: 30pt
+    display: inline
+  h3
+    font-size: 24pt
+  h4
+    font-size: 20pt
+  h5
+    font-size: 18pt
+  h6
+    font-size: 16pt
+
+#footercontainer
+  width: 100%
+  background-color: #000000
   padding:
-    top: 10px
-    bottom: 10px
-    left: 30px
-    right: 30px
-  background: #fff
-  margin-bottom: 70px
-  margin-top: -60px
+    top: 50px
+    bottom: 50px
+    left: 0px
+    right: 0px
+  margin: 0px
+  z-index: -2
+  +clearfix
 
-p
-  margin-top: 10px
-ul
-  margin-top: 10px
-  margin-bottom: 10px
-.rk
-  color: #e03020
-
-h1, h2, h3, h4, h5, h6
-  font-weight: bold
-h1
-  text-align: right
-  color: #f06050
-  font-size: 48pt
-hr
-  margin-top: 40px
-h2
-  width: 200px
-  margin-left: -190px
-  text-align: right
-  color: #2060b0
-  font-size: 30pt
-  display: inline
-h3
-  font-size: 24pt
-h4
-  font-size: 20pt
-h5
-  font-size: 18pt
-h6
-  font-size: 16pt
-
-#footer
-  margin-bottom: 50px
+  #footer
+    width= !page_width
+    margin: auto
+    margin-bottom: 0px
+    .links
+      float: left
+    .copy
+      float: right
 
 a
   color: #2060b0

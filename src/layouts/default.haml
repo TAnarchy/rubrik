@@ -29,9 +29,11 @@
 
     #main= yield
 
-    #footer
-      %span.about
-        :maruku
-          [About](/rubrik/about/)
-      %span.copy
-        &copy; 2010 Irrational Machines
+    #footercontainer
+      #footer
+        .links
+          :maruku
+            [Home](/rubrik/) | [About](/rubrik/about/)
+        .copy
+          %p
+            &copy; 2010 Irrational Machines
