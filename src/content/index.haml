@@ -2,89 +2,13 @@
 
 #content
   %div
-    :markdown
+    :maruku
       Irrational Machines is building [Rubrik](/rubrik/description/).
 
-  %div
-    :markdown
-      ### Tasks ###
-
-      Tasks to be performed are the following:
-
-      *   Student roster
-          +   Group support
-          +   SOLAR integration
-      *   List of graders
-          +   Designation for professor(s) / TA(s)
-          +   Access control
-      *   Store assignments
-          +   Weights
-          +   Point value breakdown
-          +   Statistics
-      *   Assignment creation interface
-      *   Grading interface
-          +   Scripted grading library (different language bindings?)
-      *   Assignment view interface
-          +   Mail/LaTeX export
-          +   Web interface
-              -   Per-student basis (with login): shows all assignments
-              -   Per-assignment basis: shows statistics for each assignment
-              -   Admin interface (see all students/assignments, shows curves, etc.
+  %h2#assignments Assignments
 
   %div
-    :markdown
-      ### Dependencies ###
-
-      The first three items (student roster, grader list, and
-      assignment store) have no dependencies, and are orthogonal.
-
-      The creation of assignments depends on the existance of an
-      assignment store.
-
-      The grading interface depends on the existence of an assignment store.
-      It does not necessarily depend on the existence of a list of graders
-      or a student roster, or an assignment creation interface, but all of
-      these will need to be integrated eventually, so it may be worthwhile
-      to wait until they are done before starting on the grading interface.
-
-      The various assignment view interfaces depend only on the existence of
-      the assignment store, but they will be sensitive to changes in the
-      storage format that may arise from the creation of other features.
-
-  %div
-    :markdown
-      ### Roles ###
-
-      Team roles are available on our [about page](/rubrik/about/).
-
-  %div
-    :markdown
-      ### Project Schedule ###
-
-      1. Choose implementation language: 2/10/10
-      2. Learn language, implement basic database for students, graders, and
-         assignments: 2/14/10
-      3. Functional tests for each database: 2/17/10
-      4. Write initial assignment creation and grading interfaces (teams of
-         3 each), and unit test (may require DB tweaking): 2/28/10
-      5. Integration testing for interfaces, prepare initial demo: 3/5/10
-      6. Implement access controls, write web interface for grade viewing
-         (teams of 3 each), and unit test: 3/10/10
-      7. Functional tests for access controls (authorization), and
-         authentication: 3/14/10
-      8. Re-evaluate plan to date, functional and regression testing:
-         3/19/10
-      9. Implement automatic mailer and statistics creation, possibly also
-         LaTeX export (teams of 2 or 3 each), and unit test: 3/26/10
-      10. Integration testing for mailer and statistics: 3/31/10
-      11. Attempt scripted grading and SOLAR integration if time permits:
-          4/16/10
-      12. Create presentation, demo: 4/29/10
-
-  %div
-    :markdown
-      ### Credit ###
-
-      * Design and layout: Leif
-      * Schedule: Leif
-      * Rest: Equally split among team
+    :maruku
+      1. [Initial description](/rubrik/description/)
+      2. [Tasks, dependencies, roles, and schedule](/rubrik/assignments/02/)
+      3. [Use cases and domain modelling](http://docs.google.com/View?docid=dr37zb6_11f2vwkk5x)

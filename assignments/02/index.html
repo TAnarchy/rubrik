@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en-US' xml:lang='en-US' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <title>Rubrik: Assignment 2</title>
+    <link href='/rubrik/stylesheets/screen.css' media='screen, projection' rel='stylesheet' type='text/css' />
+    <link href='/rubrik/stylesheets/print.css' media='print' rel='stylesheet' type='text/css' />
+    <!--[if IE]>
+      <link href='/rubrik/stylesheets/ie.css' media='screen, projection' rel='stylesheet' type='text/css' />
+    <![endif]-->
+  </head>
+  <body>
+    <div id='down'>
+      <p>V</p>
+      <p>V</p>
+      <p>V</p>
+    </div>
+    <div id='main'>
+      <h1>Assignment 2</h1>
+      <div id='content'>
+        <div>
+          <h3 id='tasks'>Tasks</h3>
+          
+          <p>Tasks to be performed are the following:</p>
+          
+          <ul>
+          <li>
+          <p>Student roster</p>
+          
+          <ul>
+          <li>Group support</li>
+          
+          <li>SOLAR integration</li>
+          </ul>
+          </li>
+          
+          <li>
+          <p>List of graders</p>
+          
+          <ul>
+          <li>Designation for professor(s) / TA(s)</li>
+          
+          <li>Access control</li>
+          </ul>
+          </li>
+          
+          <li>
+          <p>Store assignments</p>
+          
+          <ul>
+          <li>Weights</li>
+          
+          <li>Point value breakdown</li>
+          
+          <li>Statistics</li>
+          </ul>
+          </li>
+          
+          <li>
+          <p>Assignment creation interface</p>
+          </li>
+          
+          <li>
+          <p>Grading interface + Scripted grading library (different language bindings?)</p>
+          </li>
+          
+          <li>
+          <p>Assignment view interface</p>
+          
+          <ul>
+          <li>
+          <p>Mail/LaTeX export</p>
+          </li>
+          
+          <li>
+          <p>Web interface</p>
+          
+          <ul>
+          <li>Per-student basis (with login): shows all assignments</li>
+          
+          <li>Per-assignment basis: shows statistics for each assignment</li>
+          
+          <li>Admin interface (see all students/assignments, shows curves, etc.</li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          </ul>
+        </div>
+        <div>
+          <h3 id='dependencies'>Dependencies</h3>
+          
+          <p>The first three items (student roster, grader list, and assignment store) have no dependencies, and are orthogonal.</p>
+          
+          <p>The creation of assignments depends on the existance of an assignment store.</p>
+          
+          <p>The grading interface depends on the existence of an assignment store. It does not necessarily depend on the existence of a list of graders or a student roster, or an assignment creation interface, but all of these will need to be integrated eventually, so it may be worthwhile to wait until they are done before starting on the grading interface.</p>
+          
+          <p>The various assignment view interfaces depend only on the existence of the assignment store, but they will be sensitive to changes in the storage format that may arise from the creation of other features.</p>
+        </div>
+        <div>
+          <h3 id='roles'>Roles</h3>
+          
+          <p>Team roles are available on our <a href='/rubrik/about/'>about page</a>.</p>
+        </div>
+        <div>
+          <h3 id='project_schedule'>Project Schedule</h3>
+          
+          <ol>
+          <li>Choose implementation language: 2/10/10</li>
+          
+          <li>Learn language, implement basic database for students, graders, and assignments: 2/14/10</li>
+          
+          <li>Functional tests for each database: 2/17/10</li>
+          
+          <li>Write initial assignment creation and grading interfaces (teams of 3 each), and unit test (may require DB tweaking): 2/28/10</li>
+          
+          <li>Integration testing for interfaces, prepare initial demo: 3/5/10</li>
+          
+          <li>Implement access controls, write web interface for grade viewing (teams of 3 each), and unit test: 3/10/10</li>
+          
+          <li>Functional tests for access controls (authorization), and authentication: 3/14/10</li>
+          
+          <li>Re-evaluate plan to date, functional and regression testing: 3/19/10</li>
+          
+          <li>Implement automatic mailer and statistics creation, possibly also LaTeX export (teams of 2 or 3 each), and unit test: 3/26/10</li>
+          
+          <li>Integration testing for mailer and statistics: 3/31/10</li>
+          
+          <li>Attempt scripted grading and SOLAR integration if time permits: 4/16/10</li>
+          
+          <li>Create presentation, demo: 4/29/10</li>
+          </ol>
+        </div>
+        <div>
+          <h3 id='credit'>Credit</h3>
+          
+          <ul>
+          <li>Design and layout: Leif</li>
+          
+          <li>Schedule: Leif</li>
+          
+          <li>Rest: Equally split among team</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id='footercontainer'>
+      <div id='footer'>
+        <div class='links'>
+          <p><a href='/rubrik/'>Home</a> | <a href='/rubrik/about/'>About</a></p>
+        </div>
+        <div class='copy'>
+          <p>
+            &copy; 2010 Irrational Machines
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
