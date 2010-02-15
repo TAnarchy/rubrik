@@ -33,6 +33,7 @@
 !page_width= 600px
 
 body
+  height: 100%
   font:
     size: 16pt
     family: Arial, Verdana, sans-serif
@@ -59,8 +60,11 @@ body
       bottom: 0px
 
 #main
+  min-height: 100%
+  height: auto !important
+  height: 100%
   width= !page_width
-  margin: auto
+  margin: 0 auto 100px
 
   #content
     margin-top: 100px
@@ -108,14 +112,14 @@ body
   h6
     font-size: 16pt
 
+.push
+  height: 100px
+
 #footercontainer
   width: 100%
   background-color: #000000
-  padding:
-    top: 50px
-    bottom: 50px
-    left: 0px
-    right: 0px
+  height: 100px
+  padding: 0px
   margin: 0px
   z-index: -2
   +clearfix
