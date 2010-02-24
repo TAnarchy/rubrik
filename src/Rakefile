@@ -1,10 +1,12 @@
 require 'nanoc3/tasks'
 require 'rake/clean'
 
+# compiles the site
 task :default do
   sh "(cd #{File.dirname(__FILE__)} && nanoc3 compile)"
 end
 
+# runs the server
 task :server do
   sh "(cd #{File.dirname(__FILE__)} && nanoc3 aco)"
 end
