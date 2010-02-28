@@ -1,0 +1,13 @@
+<p>
+  <b>Points received:</b>
+  <%=h @graded_component.points_received %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%=h @graded_component.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_graded_component_path(@graded_component) %> |
+<%= link_to 'Back', graded_components_path %>

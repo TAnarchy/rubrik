@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  problem: MyText
+  points: 1
+
+two:
+  problem: MyText
+  points: 1

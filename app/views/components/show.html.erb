@@ -1,0 +1,13 @@
+<p>
+  <b>Problem:</b>
+  <%=h @component.problem %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%=h @component.points %>
+</p>
+
+
+<%= link_to 'Edit', edit_component_path(@component) %> |
+<%= link_to 'Back', components_path %>

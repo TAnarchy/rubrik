@@ -1,0 +1,2 @@
+module GradedComponentsHelper
+end
