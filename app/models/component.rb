@@ -1,3 +1,3 @@
 class Component < ActiveRecord::Base
-  belongs_to :Assignment
+  belongs_to :assignment
 end

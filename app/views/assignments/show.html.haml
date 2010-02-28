@@ -4,6 +4,9 @@
 %p
   %b Duedate:
   = h @assignment.duedate
+%p
+  %b Components:
+  = @assignment.components.map { |c| link_to c.id, c }.join ", "
 
 = link_to 'Edit', edit_assignment_path(@assignment)
 |

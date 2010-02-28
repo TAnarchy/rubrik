@@ -1,3 +1,3 @@
 class GradedComponent < ActiveRecord::Base
-  belongs_to :Submission
+  belongs_to :submission
 end

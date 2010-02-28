@@ -1,3 +1,3 @@
 class Assignment < ActiveRecord::Base
-  has_many :Components
+  has_many :components
 end

@@ -59,6 +59,10 @@ class AssignmentsController < ApplicationController
   def update
     @assignment = Assignment.find(params[:id])
 
+    params[:assignment][:components].map! do |cid|
+      Component.find(cid) unless cid.empty?
+    end.compact!
+
     respond_to do |format|
       if @assignment.update_attributes(params[:assignment])
         flash[:notice] = 'Assignment was successfully updated.'

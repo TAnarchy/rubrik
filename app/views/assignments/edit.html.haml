@@ -12,6 +12,10 @@
     %br
     = f.date_select :duedate
   %p
+    = f.label :components
+    %br
+    = collection_multiple_select :assignment, :components, Component.all, :id, :id
+  %p
     = f.submit 'Update'
 
 = link_to 'Show', @assignment
