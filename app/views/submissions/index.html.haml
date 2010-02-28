@@ -1,0 +1,19 @@
+%h1
+  Listing submissions
+%table
+  %tr
+    %th
+      Graded
+  - @submissions.each do |submission|
+    %tr
+      %td
+        = h submission.graded
+      %td
+        = link_to 'Show', submission
+      %td
+        = link_to 'Edit', edit_submission_path(submission)
+      %td
+        = link_to 'Destroy', submission, :confirm => 'Are you sure?', :method => :delete
+
+%br
+= link_to 'New submission', new_submission_path

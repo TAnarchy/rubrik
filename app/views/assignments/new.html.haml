@@ -1,0 +1,16 @@
+%h1
+  New assignment
+- form_for(@assignment) do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :duedate
+    %br
+    = f.date_select :duedate
+  %p
+    = f.submit 'Create'
+
+= link_to 'Back', assignments_path

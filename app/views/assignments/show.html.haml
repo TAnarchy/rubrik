@@ -1,0 +1,10 @@
+%p
+  %b Title:
+  = h @assignment.title
+%p
+  %b Duedate:
+  = h @assignment.duedate
+
+= link_to 'Edit', edit_assignment_path(@assignment)
+|
+= link_to 'Back', assignments_path

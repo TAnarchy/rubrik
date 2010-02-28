@@ -1,0 +1,18 @@
+%h1
+  Editing graded_component
+- form_for(@graded_component) do |f|
+  = f.error_messages
+  %p
+    = f.label :points_received
+    %br
+    = f.text_field :points_received
+  %p
+    = f.label :comments
+    %br
+    = f.text_area :comments
+  %p
+    = f.submit 'Update'
+
+= link_to 'Show', @graded_component
+|
+= link_to 'Back', graded_components_path

@@ -1,0 +1,10 @@
+%p
+  %b Points received:
+  = h @graded_component.points_received
+%p
+  %b Comments:
+  = h @graded_component.comments
+
+= link_to 'Edit', edit_graded_component_path(@graded_component)
+|
+= link_to 'Back', graded_components_path

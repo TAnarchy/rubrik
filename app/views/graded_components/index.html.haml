@@ -1,0 +1,23 @@
+%h1
+  Listing graded_components
+%table
+  %tr
+    %th
+      Points received
+    %th
+      Comments
+  - @graded_components.each do |graded_component|
+    %tr
+      %td
+        = h graded_component.points_received
+      %td
+        = h graded_component.comments
+      %td
+        = link_to 'Show', graded_component
+      %td
+        = link_to 'Edit', edit_graded_component_path(graded_component)
+      %td
+        = link_to 'Destroy', graded_component, :confirm => 'Are you sure?', :method => :delete
+
+%br
+= link_to 'New graded_component', new_graded_component_path

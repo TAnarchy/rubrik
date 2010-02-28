@@ -1,0 +1,12 @@
+%h1
+  New submission
+- form_for(@submission) do |f|
+  = f.error_messages
+  %p
+    = f.label :graded
+    %br
+    = f.check_box :graded
+  %p
+    = f.submit 'Create'
+
+= link_to 'Back', submissions_path

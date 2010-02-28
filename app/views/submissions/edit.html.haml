@@ -1,0 +1,14 @@
+%h1
+  Editing submission
+- form_for(@submission) do |f|
+  = f.error_messages
+  %p
+    = f.label :graded
+    %br
+    = f.check_box :graded
+  %p
+    = f.submit 'Update'
+
+= link_to 'Show', @submission
+|
+= link_to 'Back', submissions_path
