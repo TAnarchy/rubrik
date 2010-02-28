@@ -1,19 +1,16 @@
 %p
-  %b
-    Username:
+  %b Username:
   = h @user.username
 %p
-  %b
-    Hashed pass:
+  %b Hashed pass:
   = h @user.hashed_pass
 %p
-  %b
-    Email:
+  %b Email:
   = h @user.email
 %p
-  %b
-    Name:
+  %b Name:
   = h @user.name
+
 = link_to 'Edit', edit_user_path(@user)
 |
 = link_to 'Back', users_path
