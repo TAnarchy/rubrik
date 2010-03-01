@@ -7,6 +7,6 @@
       = controller.action_name
     = stylesheet_link_tag 'scaffold'
   %body
-    %p{ :style => "color: green" }
-      = flash[:notice]
+    = render :partial => 'layouts/header'
+    = render :partial => 'layouts/flashes'
     = yield

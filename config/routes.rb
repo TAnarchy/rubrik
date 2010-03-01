@@ -7,6 +7,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :assignments
 
+  map.connect 'users/login', :controller => :users, :action => :login
+  map.connect 'users/logout', :controller => :users, :action => :logout
   map.resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

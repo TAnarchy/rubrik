@@ -7,9 +7,13 @@
     %br
     = f.text_field :username
   %p
-    = f.label :hashed_pass
+    = f.label :password
     %br
-    = f.text_field :hashed_pass
+    = f.password_field :password
+  %p
+    = f.label :password_confirmation
+    %br
+    = f.password_field :password_confirmation
   %p
     = f.label :email
     %br
