@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  points_received: 1
+  comments: MyText
+
+two:
+  points_received: 1
+  comments: MyText
